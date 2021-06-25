@@ -1,0 +1,150 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body background="./webapp_files/background2.jpg" style="background-repeat:no-repeat ; background-size:100% 100%"><div id="d2" style="font-size: 50px;" ,=""><b>DOCKER UI</b></div>
+
+<img id="img1" src="./webapp_files/whale-docker.gif" alt="docker_animation" width="400" height="300">
+<img id="img2" src="./webapp_files/original.gif" alt="docker_animation" width="1060" height="680">
+
+<br>
+<br>
+<br>
+
+
+
+
+<style>
+    div#d2 {
+        text-align:center;
+        font-family:cursive;
+        color: #ffffff;
+        background: rgba( 0, 0, 0, 1);
+        box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0 );
+        backdrop-filter: blur( 1.5px );
+        -webkit-backdrop-filter: blur( 0.5px );
+  
+        border: 1px solid rgb(0, 0, 128);
+        width: 1280px;
+        height: 80px ;
+        position: absolute;
+        left : 0px;
+        top: 0px;
+  
+      }
+    
+   </style>
+
+<script>
+function f1()
+{
+var xhr = new XMLHttpRequest();
+xhr.open ( "GET", "http://192.168.89.10/cgi-bin/docker.py?x="+document.getElementById('input').value,"true");
+xhr.send();
+
+xhr.onload = function ()
+{
+document.getElementById('out').innerHTML = xhr.responseText; }
+//document.body.style.backgroundImage="url('color.gif')";
+
+}
+</script>
+
+
+<div id="s1"> <b> Enter the command you want to run inside the box given below: </b> </div>
+
+<div id="s2"> <b> Output of the command will be shown in the Output Box given below: </b> </div>
+
+
+
+<div id="d1"> <b> root@localhost:~# </b><input id="input"><button onclick="f1(); move();">CLICK</button></div>
+<br>
+<pre><div style="font-size:18px" ,="" id="out"><b>OUTPUT BOX</b> </div></pre>
+
+
+<meta name="viewport" content="width=100px, initial-scale=1">
+
+
+
+
+
+
+
+
+
+<style>
+div#s2{
+    
+        color: #ffffff;
+        font-family:cursive;
+        font-size : 18px;
+        width: 600px;
+        height: 50px;
+        position: absolute;
+        left: 10px;
+        top : 250px;
+
+}
+div#s1{ 
+        color: #ffffff;
+        font-family:cursive;
+        font-size : 18px;
+        width: 600px;
+        height: 50px;
+        position: absolute;
+        left: 10px;
+        top : 150px;
+
+}
+div#d1 {
+     
+    background: rgba( 255, 255, 255, 0.50);
+    box-shadow: 0 8px 32px 0 rgba( 255, 0, 0, 0 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.1 );
+        font-family:cursive;
+        font-size : 18px;
+        width: 400px;
+        height: 30px;
+        position: absolute;
+        left: 10px;
+        top : 200px;
+        }
+
+div#out {
+        font-family:cursive;
+       font-size: 15px;
+        width: 660px;
+        height: 300px;
+        position: absolute;
+        left: 10px;
+        top : 300;
+
+     background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 8px 32px 0 rgba(255, 0, 0, 0.0);
+    backdrop-filter: blur( 0.0px );
+    -webkit-backdrop-filter: blur( 0.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+img#img1 {
+
+    position: absolute;
+    left: 800;
+    top:300;
+}
+img#img2 {
+
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+
+
+
+
+
+
+</style>
+        
+</body></html>
