@@ -35,13 +35,12 @@
 function f1()
 {
 var xhr = new XMLHttpRequest();
-xhr.open ( "GET", "http://192.168.89.10/cgi-bin/docker.py?x="+document.getElementById('input').value,"true");
+xhr.open ( "GET", "http://192.168.89.10/cgi-bin/lw.py?x="+document.getElementById('input').value,"true");
 xhr.send();
 
 xhr.onload = function ()
 {
 document.getElementById('out').innerHTML = xhr.responseText; }
-//document.body.style.backgroundImage="url('color.gif')";
 
 }
 </script>
@@ -52,7 +51,8 @@ document.getElementById('out').innerHTML = xhr.responseText; }
 <div id="s2"> <b> Output of the command will be shown in the Output Box given below: </b> </div>
 
 
-
+//Creating the command prompt setup
+    
 <div id="d1"> <b> root@localhost:~# </b><input id="input"><button onclick="f1(); move();">CLICK</button></div>
 <br>
 <pre><div style="font-size:18px" ,="" id="out"><b>OUTPUT BOX</b> </div></pre>
